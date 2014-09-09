@@ -12,4 +12,4 @@ delete_element_try1(Element, [_Other|List]) ->
 
 prop_delete_0_try1() ->
     ?FORALL({X, Xs}, {int(), list(int())},
-            not lists:member(X, delete_element_try1(X, Xs))).
+            lists:delete(X, Xs) == delete_element_try1(X, Xs)).
