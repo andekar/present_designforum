@@ -1,6 +1,7 @@
 -module(example).
 
 -compile(export_all).
+-include_lib("eqc/include/eqc.hrl").
 
 delete_element_try1(_, []) ->
     [];
